@@ -21,7 +21,7 @@
 ################################################
 REDDITSUBS=(earthporn villageporn itookapicture specart ImaginaryLandscapes SpacePorn)
 #REDDITSUBS=(ginger gonewild hotchickswithtattoos xsmall)
-NSFW=0 				#Show NSFW Images 0=No,1=Yes
+NSFW=0 				# NSFW Images 0=Never,1=Indifferent,2=Only
 IMAGESIZE="(6/10)"		# How big should the foreground image be on the wallpaper?
 ImageBorderSize=3		# How thick should the border be (0-100)
 ImageBorderColor="#6b6a64"	# Color
