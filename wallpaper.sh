@@ -56,7 +56,7 @@ function getRandomRedditImage {
 
 function transformImage {
 	cd "$TEMPDIR" || exit 1
-	RESOLUTION=$(xrandr 2>/dev/null |grep "*"|awk '{ print $1 }')
+	RESOLUTION=$(xrandr 2>/dev/null | awk '/\*/ {print $1}')
 	BGZOOM=$(echo "$RESOLUTION" | awk -Fx '{print $1*2 "x" $2*2}')
 	BGOFFSET=$(echo "$RESOLUTION" | awk -Fx '{print "+" $1/3 "+" $2/3}')
 	IMAGERES=$(echo "$RESOLUTION" | awk -Fx '{print $1*'$IMAGESIZE' "x" $2*'$IMAGESIZE'}')
