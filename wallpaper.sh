@@ -69,7 +69,7 @@ function transformImage {
 	mogrify \( -resize ${IMAGERES} \) \
 		\( -bordercolor $ImageBorderColor -border $ImageBorderSize \) "$IMAGE"
 	composite -gravity center "$IMAGE" "$BG" "$DEST"
-	mv $DEST /home/cpare/Pictures/
+	mv $DEST /home/`whoami`/Pictures/
 }
 
 function mkTempWorkingDir {
@@ -81,7 +81,7 @@ function mkTempWorkingDir {
 
 function setwallpaper {
 	#Need to add logic here for Ubuntu/other distro identification & processing
-	gconftool-2 -t string -s /desktop/gnome/background/picture_filename /home/cpare/Pictures/$DEST
+	gconftool-2 -t string -s /desktop/gnome/background/picture_filename /home/`whoami`/Pictures/$DEST
 }
 
 mkTempWorkingDir
